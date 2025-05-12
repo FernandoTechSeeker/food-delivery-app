@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
+*{ 
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh; /* Altura mínima da tela */
+}
+
+:root {
+  /* CORES PRINCIPAIS */
+  --cor-primary: #FF6B35;      /* Laranja vibrante (CTA) */
+  --cor-secondary: #388E3C;    /* Verde fresco (sucesso/confirm) */
+  --cor-accent: #FFD166;       /* Amarelo suave (hover/alertas) */}
+
+  .cabecalho{
+    width: 100%;
+    background-color: var(--cor-primary);  /*imagem depois*/
+
+
+    }
+
+    .menu .ul-menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+
+    .ul-menu li{
+        list-style: none;
+        margin: 2rem;
+        color:azure
+    }
+    
+    .bi-file-person{
+        font-size: 60px;
+        color: azure;
+    }
+
+    .bi-geo-alt{
+        font-size: 60px;
+        color: azure;
+    }
+
+    .nome-localizacao{
+        font-size: 40px;
+        color: azure;
+        padding-left: 0;
+        padding-right: 5rem;
+    }
+
+    .bi-image-fill{
+        font-size: 60px;
+        color: azure;
+    }
