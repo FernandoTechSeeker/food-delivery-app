@@ -16,6 +16,20 @@ body {
     /* Garante que cubra toda a altura da viewport */
     min-height: 100vh;
 }
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem; /* opcional, só pra dar espaço antes do footer */
+}
+
+main::after {
+  content: '';
+  flex-grow: 1;
+}
+
+
 
 /* Definição de variáveis de cores globais */
 :root {
@@ -25,4 +39,176 @@ body {
     --cor-secondary: #388E3C;
     /* Cor de destaque (hover, alertas) */
     --cor-accent: #FFD166;
+}
+
+/* Estilização do cabeçalho */
+.navegacao-produto{
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+  background-color: #ffffff; /* fundo branco ou use um cinza claro tipo #f8f8f8 */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve pra separar visualmente */
+  justify-content: flex-end; /* alinha o conteúdo à direita */;
+  margin-top: 10px; /* dá espaço abaixo do topo */
+}
+
+.bi-chevron-double-left {
+  font-size: 1.7rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-chevron-double-left:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}   
+.bi-chevron-double-left:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.bi-heart-fill {
+  font-size: 1.7rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-heart-fill:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-heart-fill:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.detalhes-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+/* Estilização do título do produto */
+.titulo-produto {
+  font-size: 2rem; /* tamanho do título */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  font-weight: bold; /* negrito */
+  margin-bottom: 10px; /* espaço abaixo do título */
+}
+.descricao-produto {
+  font-size: 1.2rem; /* tamanho da descrição */
+  color: #555; /* cor cinza escuro */
+  text-align: center; /* centraliza o texto */
+  margin-bottom: 20px; /* espaço abaixo da descrição */
+}
+
+.layout-produto {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* fundo cinza claro */
+  border-radius: 12px; /* bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra leve */
+}
+
+/* Coluna da imagem principal */
+.coluna-imagem .imagem-produto {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.coluna-imagem .imagem-produto:hover {
+  transform: scale(1.05); /* aumenta a imagem ao passar o mouse */
+  transition: transform 0.3s; /* animação suave */
+  border: 2px solid var(--cor-primary); /* borda laranja ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra mais forte ao passar o mouse */
+}
+
+/* Coluna do conteúdo */
+.coluna-detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.preco-info {
+  margin-top: 3rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff; /* fundo branco */
+  border-radius: 12px; /* bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra leve */
+}
+
+.descricao-produto {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.preco-info p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.btn-adicionar-carrinho {
+  margin-top: 1rem;
+  background-color: var(--cor-primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-adicionar-carrinho:hover {
+  background-color: var(--cor-accent);
+  transition: background-color 0.3s;
+}
+.btn-adicionar-carrinho:active {
+  background-color: var(--cor-secondary);
+  transition: background-color 0.3s;
+}
+/* Estilização do botão de adicionar ao carrinho */
+.btn-adicionar-carrinho {
+  background-color: var(--cor-primary); /* cor laranja */
+  color: white; /* texto branco */
+  padding: 10px 20px; /* espaçamento interno */
+  border: none; /* sem borda */
+  border-radius: 6px; /* bordas arredondadas */
+  cursor: pointer; /* cursor de mãozinha */
+  font-size: 1rem; /* tamanho da fonte */
+}
+.btn-adicionar-carrinho:hover {
+  background-color: var(--cor-accent); /* cor de destaque */
+  transition: background-color 0.3s; /* animação suave */
+}
+.btn-adicionar-carrinho:active {
+  background-color: var(--cor-secondary); /* cor de sucesso */
+  transition: background-color 0.3s; /* animação suave */
+}
+
+/* Coluna de sugestão */
+.coluna-sugestao .imagem-sugerida {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid var(--cor-primary);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.coluna-sugestao .imagem-sugerida:hover {
+  transform: scale(1.05);
 }

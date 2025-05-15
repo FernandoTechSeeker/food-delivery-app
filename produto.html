@@ -58,40 +58,42 @@
 <section class="detalhes-produto">
   <h1 class="titulo-produto">NOME DO PRODUTO</h1>
 
-  <p class="descricao-produto">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem asperiores quisquam hic veritatis.
-  </p>
+  <div class="layout-produto">
+    <!-- Imagem principal -->
+    <div class="coluna-imagem">
+      <img
+        class="imagem-produto"
+        src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg"
+        alt="imagem do produto"
+      />
+    </div>
 
-  <!-- Imagem e controle de quantidade -->
-  <div class="imagem-e-quantidade">
-    <img
-      class="imagem-produto"
-      src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg"
-      alt="imagem exemplo"
-    />
+    <!-- Texto e preço -->
+    <div class="coluna-detalhes">
+      <p class="descricao-produto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem asperiores quisquam hic veritatis.
+      </p>
 
-    <div class="controle-quantidade">
-      <i class="bi bi-dash-square botao-diminuir"></i>
-      <p class="quantidade-produto">1</p>
-      <i class="bi bi-plus-square botao-aumentar"></i>
+      <div class="preco-info">
+        <p><strong>Preço Unitário</strong>: R$ 90,00</p>
+        <p><strong>Preço Total</strong>: R$ 000,00</p>
+        <button class="btn-adicionar-carrinho">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    <!-- Produto sugerido -->
+    <div class="coluna-sugestao">
+      <a href="home.html">
+        <img
+          class="imagem-sugerida"
+          src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+          alt="Produto sugerido"
+        />
+      </a>
     </div>
   </div>
-
-  <!-- Preços -->
-  <div class="preco-produto">
-    <p class="preco-unitario-label">Preço Unitário</p>
-    <p class="preco-unitario">R$ 000,00</p>
-
-    <p class="preco-total-label">Preço Total</p>
-    <p class="preco-total">R$ 000,00</p>
-  </div>
-
-  <!-- Adicionar ao carrinho -->
-  <div class="adicionar-carrinho">
-    <i class="bi bi-cart4"></i>
-    <button class="btn-adicionar-carrinho">Adicionar ao carrinho</button>
-  </div>
 </section>
+
 
 
 

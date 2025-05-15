@@ -11,11 +11,25 @@
     padding: 0;
 }
 
-/* Estilização básica do body */
 body {
-    /* Garante que cubra toda a altura da viewport */
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem; /* opcional, só pra dar espaço antes do footer */
+}
+main::after {
+  content: '';
+  flex-grow: 1;
+}
+
+
 
 /* Definição de variáveis de cores globais */
 :root {
@@ -79,6 +93,7 @@ body {
   justify-content: space-between; /* espaço entre os itens */
   padding: 10px 20px; /* espaçamento interno */
   border-bottom: 1px solid #ddd; /* linha de separação */
+  min-height: 120px;
 }
 
 .imagem-produto-carrinho {

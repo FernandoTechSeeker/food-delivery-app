@@ -21,6 +21,20 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem; /* opcional, só pra dar espaço antes do footer */
+}
+
+main::after {
+  content: '';
+  flex-grow: 1;
+}
+
+
 
 /* Título bonito e no topo */
 .titulo-form {
