@@ -1,0 +1,240 @@
+/* Importa a fonte Roboto do Google Fonts (400 e 700) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Seleciona todos os elementos da página */
+* {
+    /* Aplica Roboto (ou fonte fallback) em todo o site */
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /* Remove margens padrão */
+    margin: 0;
+    /* Remove espaçamentos internos padrão */
+    padding: 0;
+}
+
+/* Estilização básica do body */
+body {
+    /* Garante que cubra toda a altura da viewport */
+    min-height: 100vh;
+}
+
+/* Definição de variáveis de cores globais */
+:root {
+    /* Cor principal (CTA, botões) */
+    --cor-primary: #FF6B35;
+    /* Cor secundária (status de sucesso, confirm) */
+    --cor-secondary: #388E3C;
+    /* Cor de destaque (hover, alertas) */
+    --cor-accent: #FFD166;
+}
+
+.cabecalho-carrinho {
+  background-color: #ffffff; /* fundo branco ou use um cinza claro tipo #f8f8f8 */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve pra separar visualmente */
+  justify-content: flex-end; /* alinha o conteúdo à direita */;
+  margin-top: 10px; /* dá espaço abaixo do topo */
+}
+
+.bi-chevron-double-left {
+  font-size: 1.7rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-chevron-double-left:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-chevron-double-left:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.titulo-carrinho {
+  font-size: 1.7rem; /* tamanho do título */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  font-weight: bold; /* negrito */
+  margin-left: 10px; /* espaço à esquerda */
+}
+
+.bi-cart-x{
+  font-size: 1.7rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-cart-x:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-cart-x:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espaço entre os itens */
+  padding: 10px 20px; /* espaçamento interno */
+  border-bottom: 1px solid #ddd; /* linha de separação */
+}
+
+.imagem-produto-carrinho {
+  width: 80px;         /* menor que no produto */
+  height: 80px;
+  flex-shrink: 0; /* impede de encolher se faltar espaço */
+
+
+}
+
+.imagem-produto-carrinho img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* garante que a imagem preencha sem distorcer */
+  border-radius: 6px;
+}
+
+.nome-produto-carrinho {
+  font-size: 1.7rem; /* tamanho do nome do produto */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  font-weight: bold; /* negrito */
+  margin-left: 10px; /* espaço à esquerda */
+}
+
+.controle-quantidade-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre os botões */
+}
+
+.bi-dash-square {
+  font-size: 1.5rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-dash-square:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-dash-square:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+.bi-plus-square {
+  font-size: 1.5rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-plus-square:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-plus-square:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.preco-produto-carrinho {
+  font-size: 1.5rem; /* tamanho do preço */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  font-weight: bold; /* negrito */
+}
+
+.bi-dash-square {
+  font-size: 1.5rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-dash-square:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-dash-square:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+.bi-plus-square {
+  font-size: 1.5rem; /* tamanho do ícone */
+  color: var(--cor-primary); /* usa a cor laranja principal */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.bi-plus-square:hover {
+  color: var(--cor-accent); /* muda a cor no hover */
+}
+.bi-plus-square:active {
+  color: var(--cor-secondary); /* muda a cor quando clicado */
+}
+
+.cupom-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espaço entre os itens */
+  padding: 10px 20px; /* espaçamento interno */
+  border-bottom: 1px solid #ddd; /* linha de separação */
+}
+.cupom-carrinho input {
+  width: 100%; /* ocupa todo o espaço disponível */
+  padding: 10px; /* espaçamento interno */
+  border: 1px solid #ddd; /* borda leve */
+  border-radius: 6px; /* bordas arredondadas */
+  font-size: 1.5rem; /* tamanho da fonte */
+}
+.cupom-carrinho button {
+  background-color: var(--cor-primary); /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border: none; /* sem borda */
+  padding: 10px 20px; /* espaçamento interno */
+  border-radius: 6px; /* bordas arredondadas */
+  font-size: 1.5rem; /* tamanho da fonte */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.cupom-carrinho button:hover {
+  background-color: var(--cor-accent); /* muda a cor no hover */
+}
+
+.btn-aplicar-cupom {
+  background-color: var(--cor-primary); /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border: none; /* sem borda */
+  padding: 10px 20px; /* espaçamento interno */
+  border-radius: 6px; /* bordas arredondadas */
+  font-size: 1.5rem; /* tamanho da fonte */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+
+.btn-aplicar-cupom:hover {
+  background-color: var(--cor-accent); /* muda a cor no hover */
+}
+
+.resumo-pedido {
+  display: flex;
+  flex-direction: column; /* empilha os itens verticalmente */
+  padding: 10px 20px; /* espaçamento interno */
+  border-top: 1px solid #ddd; /* linha de separação */
+}
+
+.totais {
+  font-size: 1.5rem; /* Example style: define font size */
+  color: var(--cor-primary); /* Example style: use primary color */
+}
+
+.label-total{
+    font-size: 1.5rem; /* Example style: define font size */
+    color: var(--cor-primary); /* Example style: use primary color */
+    font-weight: bold; /* Example style: make it bold */
+}
+
+.label-delivery{
+    font-size: 1.5rem; /* Example style: define font size */
+    color: var(--cor-primary); /* Example style: use primary color */
+    font-weight: bold; /* Example style: make it bold */
+}
+
+.btn-finalizar {
+  background-color: var(--cor-primary); /* cor de fundo */
+  color: #fff; /* cor do texto */
+  border: none; /* sem borda */
+  padding: 10px 20px; /* espaçamento interno */
+  border-radius: 6px; /* bordas arredondadas */
+  font-size: 1.5rem; /* tamanho da fonte */
+  cursor: pointer; /* muda o cursor pra indicar que é clicável */
+}
+.btn-finalizar:hover {
+  background-color: var(--cor-accent); /* muda a cor no hover */
+}

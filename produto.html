@@ -13,6 +13,7 @@
     <!-- Importa biblioteca de ícones Bootstrap Icons -->
     <link rel="stylesheet" href="css/style-padrao.css">
     <!-- Liga o arquivo CSS customizado -->
+    <link rel="stylesheet" href="css/produto.css">
     <title>Produto</title>
 </head>
 <body>
@@ -47,38 +48,51 @@
         </nav>
     </header>
 
-    <section>
-        <i class="bi bi-chevron-double-left"></i>
-        <i class="bi bi-heart-fill"></i>
-    </section>
+   <!-- Navegação do produto -->
+<section class="navegacao-produto">
+  <i class="bi bi-chevron-double-left"></i>
+  <i class="bi bi-heart-fill"></i>
+</section>
 
-    <section>
-        <h1>NOME DO PRODUTO</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, alias! Quidem asperiores quisquam hic veritatis, a minima, pariatur consectetur excepturi error in inventore vel fugiat repellat quae, repudiandae iste corrupti?</p>
-        
-        <div>
-            <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-            " alt="imagem exemplo">
-            <div>
-            <i class="bi bi-dash-square"></i>
-            <p>1</p>
-            <i class="bi bi-plus-square"></i>
-            </div>
-        </div>
-        <div>
-            <p>Preço Unitário</p>
-            <p>R$ 000,00</p>
+<!-- Detalhes do produto -->
+<section class="detalhes-produto">
+  <h1 class="titulo-produto">NOME DO PRODUTO</h1>
 
-            <p>Preço Total</p>
-            <p>R$ 000,00</p>
-        </div>
+  <p class="descricao-produto">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem asperiores quisquam hic veritatis.
+  </p>
 
-        <div>
-            <i class="bi bi-cart4"></i>
-            <button>Adicionar ao carrinho</button>
-        </div>
-    </section>
-   
+  <!-- Imagem e controle de quantidade -->
+  <div class="imagem-e-quantidade">
+    <img
+      class="imagem-produto"
+      src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg"
+      alt="imagem exemplo"
+    />
+
+    <div class="controle-quantidade">
+      <i class="bi bi-dash-square botao-diminuir"></i>
+      <p class="quantidade-produto">1</p>
+      <i class="bi bi-plus-square botao-aumentar"></i>
+    </div>
+  </div>
+
+  <!-- Preços -->
+  <div class="preco-produto">
+    <p class="preco-unitario-label">Preço Unitário</p>
+    <p class="preco-unitario">R$ 000,00</p>
+
+    <p class="preco-total-label">Preço Total</p>
+    <p class="preco-total">R$ 000,00</p>
+  </div>
+
+  <!-- Adicionar ao carrinho -->
+  <div class="adicionar-carrinho">
+    <i class="bi bi-cart4"></i>
+    <button class="btn-adicionar-carrinho">Adicionar ao carrinho</button>
+  </div>
+</section>
+
 
 
 <footer id="footer" class="footer">

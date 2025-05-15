@@ -1,4 +1,3 @@
-
 /* Importa a fonte Roboto das variantes 400 (regular) e 700 (bold) do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
@@ -186,4 +185,3 @@ body {
 .botao-form:hover {
   background-color: #218838;
 }
-

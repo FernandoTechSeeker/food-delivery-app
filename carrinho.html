@@ -13,6 +13,7 @@
     <!-- Importa biblioteca de ícones Bootstrap Icons -->
     <link rel="stylesheet" href="css/style-padrao.css">
     <!-- Liga o arquivo CSS customizado -->
+    <link rel="stylesheet" href="css/carrinho.css">
     <title>Carrinho</title>
 </head>
 <body>
@@ -46,64 +47,62 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <i class="bi bi-chevron-double-left"></i>
-        <p>CARRINHO</p>
-        <i class="bi bi-cart-x"></i>
-    </section>
-    <section>
-        <div>
-            <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-            " alt="imagem do produto">
-        </div>
-        <div>
-            <p>NOME DO PRODUTO</p>
-        </div>
-        <div>
-            <i class="bi bi-dash-square"></i>
-            <p>1</p>
-            <i class="bi bi-plus-square"></i>
-        </div>
-        <div>
-            <i class="bi bi-trash"></i>
-            <p>R$ 000,00</p>
-        </div>
-    </section>
-    <section>
-        <i class="bi bi-chevron-double-left"></i>
-        <p>CARRINHO</p>
-        <i class="bi bi-cart-x"></i>
-    </section>
-    <section>
-        <div>
-            <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-            " alt="imagem do produto">
-        </div>
-        <div>
-            <p>NOME DO PRODUTO</p>
-        </div>
-        <div>
-            <i class="bi bi-dash-square"></i>
-            <p>1</p>
-            <i class="bi bi-plus-square"></i>
-        </div>
-        <div>
-            <i class="bi bi-trash"></i>
-            <p>R$ 000,00</p>
-        </div>
-    </section>
-    <section>
-        <input type="text" placeholder="Digite seu cupom aqui...">
-        <button>Adicionar</button>  
-    </section>
-    <section>
-        <div>
-            <p>TOTAL</p>
-            <p>DELIVERY</p>
+    <section class="cabecalho-carrinho">
+    <i class="bi bi-chevron-double-left"></i>
+    <p class="titulo-carrinho">CARRINHO</p>
+    <i class="bi bi-cart-x"></i>
+</section>
 
-        </div>
-    <button>FINALIZAR PEDIDO</button>
-    </section>
+<section class="item-carrinho">
+    <div class="imagem-produto-carrinho">
+        <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem do produto">
+    </div>
+    <div class="nome-produto-carrinho">
+        <p>NOME DO PRODUTO</p>
+    </div>
+    <div class="controle-quantidade-carrinho">
+        <i class="bi bi-dash-square botao-diminuir"></i>
+        <p class="quantidade">1</p>
+        <i class="bi bi-plus-square botao-aumentar"></i>
+    </div>
+    <div class="preco-produto-carrinho">
+        <i class="bi bi-trash"></i>
+        <p class="preco">R$ 000,00</p>
+    </div>
+</section>
+
+<!-- Repetição de item se necessário -->
+<section class="item-carrinho">
+    <div class="imagem-produto-carrinho">
+        <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem do produto">
+    </div>
+    <div class="nome-produto-carrinho">
+        <p>NOME DO PRODUTO</p>
+    </div>
+    <div class="controle-quantidade-carrinho">
+        <i class="bi bi-dash-square botao-diminuir"></i>
+        <p class="quantidade">1</p>
+        <i class="bi bi-plus-square botao-aumentar"></i>
+    </div>
+    <div class="preco-produto-carrinho">
+        <i class="bi bi-trash"></i>
+        <p class="preco">R$ 000,00</p>
+    </div>
+</section>
+
+<section class="cupom-carrinho">
+    <input type="text" placeholder="Digite seu cupom aqui..." class="campo-cupom">
+    <button class="btn-aplicar-cupom">Adicionar</button>  
+</section>
+
+<section class="resumo-pedido">
+    <div class="totais">
+        <p class="label-total">TOTAL</p>
+        <p class="label-delivery">DELIVERY</p>
+    </div>
+    <button class="btn-finalizar">FINALIZAR PEDIDO</button>
+</section>
+
     <footer id="footer" class="footer">
             <!-- Rodapé da página; id e classe para layout e cor de fundo -->
             <ul class="footer-card">

@@ -1,0 +1,28 @@
+/* Importa a fonte Roboto do Google Fonts (400 e 700) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Seleciona todos os elementos da página */
+* {
+    /* Aplica Roboto (ou fonte fallback) em todo o site */
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /* Remove margens padrão */
+    margin: 0;
+    /* Remove espaçamentos internos padrão */
+    padding: 0;
+}
+
+/* Estilização básica do body */
+body {
+    /* Garante que cubra toda a altura da viewport */
+    min-height: 100vh;
+}
+
+/* Definição de variáveis de cores globais */
+:root {
+    /* Cor principal (CTA, botões) */
+    --cor-primary: #FF6B35;
+    /* Cor secundária (status de sucesso, confirm) */
+    --cor-secondary: #388E3C;
+    /* Cor de destaque (hover, alertas) */
+    --cor-accent: #FFD166;
+}
