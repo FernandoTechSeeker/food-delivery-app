@@ -1,59 +1,447 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+/* Importa a fonte Roboto do Google Fonts (400 e 700) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-*{ 
+/* Seleciona todos os elementos da página */
+* {
+    /* Aplica Roboto (ou fonte fallback) em todo o site */
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /* Remove margens padrão */
     margin: 0;
+    /* Remove espaçamentos internos padrão */
     padding: 0;
 }
 
-body{
-    min-height: 100vh; /* Altura mínima da tela */
+/* Estilização básica do body */
+body {
+    /* Garante que cubra toda a altura da viewport */
+    min-height: 100vh;
 }
 
+/* Definição de variáveis de cores globais */
 :root {
-  /* CORES PRINCIPAIS */
-  --cor-primary: #FF6B35;      /* Laranja vibrante (CTA) */
-  --cor-secondary: #388E3C;    /* Verde fresco (sucesso/confirm) */
-  --cor-accent: #FFD166;       /* Amarelo suave (hover/alertas) */}
+    /* Cor principal (CTA, botões) */
+    --cor-primary: #FF6B35;
+    /* Cor secundária (status de sucesso, confirm) */
+    --cor-secondary: #388E3C;
+    /* Cor de destaque (hover, alertas) */
+    --cor-accent: #FFD166;
+}
 
-  .cabecalho{
+/* =========================
+   Cabeçalho (header)
+   ========================= */
+.cabecalho {
+    /* Largura total */
     width: 100%;
-    background-color: var(--cor-primary);  /*imagem depois*/
+    /* Fundo laranja vibrante */
+    background-color: var(--cor-primary);
+}
 
+/* Menu de navegação dentro do header */
+.menu .ul-menu {
+    /* Flexbox para alinhar itens em linha */
+    display: flex;
+    /* Empurra itens para a direita */
+    justify-content: flex-end;
+    /* Alinha verticalmente ao centro */
+    align-items: center;
+}
+
+/* Itens da lista de navegação */
+.ul-menu li {
+    /* Remove marcadores de lista */
+    list-style: none;
+    /* Espaçamento ao redor de cada li */
+    margin: 2rem;
+    /* Cor dos ícones/textos */
+    color: azure;
+}
+
+/* Estilização específica para o ícone de perfil */
+.bi-file-person {
+    /* Aumenta o tamanho do ícone */
+    font-size: 60px;
+    color: azure;
+}
+
+/* Seleciona o li que tem id imagem-localizacao */
+ul li#imagem-localizacao {
+    display: flex;
+    /* Ajusta preenchimento interno à esquerda */
+    padding-left: 5rem;
+    /* Espaçamento à direita */
+    margin-right: 8rem;
+    /* Centraliza ícone e texto verticalmente */
+    align-items: center;
+}
+
+/* Ícone de localização (pin) */
+.bi-geo-alt {
+    font-size: 60px;
+    color: azure;
+}
+
+/* Texto com nome da localização */
+.nome-localizacao {
+    font-size: 40px;
+    color: azure;
+    /* Espaçamento interno à direita */
+    padding-right: 5rem;
+}
+
+/* Ícone de imagem no menu */
+.bi-image-fill {
+    font-size: 60px;
+    color: azure;
+}
+
+/* =========================
+   Seção de mensagem de boas-vindas
+   ========================= */
+section#mensagem-inicio {
+    /* Espaçamento interno generoso */
+    padding: 2rem;
+    /* Mesma cor do header para consistência */
+    background-color: var(--cor-primary);
+}
+
+/* Título principal da empresa */
+#nome-empresa {
+    /* Fonte em negrito (bolder) */
+    font-weight: bold;
+    font-size: 50px;
+    /* Espaço abaixo do título */
+    margin-bottom: 5rem;
+    color: azure;
+}
+
+/* Texto de boas-vindas */
+.mensagem {
+    font-size: 20px;
+    color: var(--cor-accent);
+    margin: 1rem 0;
+}
+
+/* =========================
+   Seção de input (busca/pedido)
+   ========================= */
+section#input {
+    display: flex;
+    /* Distância do topo */
+    padding-top: 5rem;
+    /* Largura limitada */
+    width: 90%;
+    /* Centraliza horizontalmente */
+    margin: auto;
+    align-items: center;
+}
+
+/* Ícone de lupa dentro da seção de input */
+i.bi-search {
+    position: absolute;
+    font-size: 40px;
+    color: var(--cor-accent);
+    /* Posicionamento interno */
+    padding-left: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Campo de texto para digitar o pedido */
+#input-text {
+    width: 90%;
+    margin: auto;
+    font-size: 25px;
+    /* Espaçamento interno vertical e lateral esquerdo para ícone */
+    padding: 1.2rem 0 1.2rem;
+    padding-left: 4rem;
+    /* Borda com estilo "ridge" — verificar sintaxe rgba */
+    border: 2px ridge rgba(255, 197, 5, 1);
+    text-align: center;
+}
+
+/* Remove outline padrão ao focar no input */
+input:focus {
+    outline: none;
+}
+
+/* Cor do placeholder em navegadores WebKit */
+::-webkit-input-placeholder {
+    color: gray;
+}
+
+/* Cor do texto ao digitar */
+input[type="text"] {
+    color: grey;
+}
+
+/* =========================
+   Seção de categorias
+   ========================= */
+#section-categorias {
+    /* Flexbox para espaçar categorias — mas ID não corresponde ao HTML (typo) */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Lista de categorias em flex row */
+#categoria-ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* Links das categorias — envolvem cada <li> */
+.categoria-a {
+    margin: 3rem 5rem;
+    /* Remove sublinhado */
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* Itens de categoria (li) */
+li.categoria {
+    list-style: none;
+    margin: 1.2rem auto;
+    color: gray;
+    border: solid 1px var(--cor-primary);
+    border-radius: 2rem;
+    width: 90%;
+    padding: 2rem;
+    font-weight: 300;
+    text-align: center;
+    /* Transição suave ao passar o mouse — typo em "tranfsform" */
+    transition: transform 0.6s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Hover nos cards de categoria */
+.categoria:hover {
+    background-color: var(--cor-primary);
+    border: 5px solid var(--cor-accent);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px var(--cor-accent);
+}
+
+/* =========================
+   Seção de cards de produtos
+   ========================= */
+section#cards-produtos {
+    display: flex;
+}
+
+/* Cada cartão de produto */
+.card-produto {
+    display: block;
+    margin: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 5px 15px var(--cor-primary);
+    width: 25%;
+    text-align: center;
+}
+
+/* Hover no card de produto */
+.card-produto:hover {
+    /* Efeito interno (inset) — sem cor especificada: pode não gerar contraste */
+    box-shadow: inset 50px 0 0 0 var(--cor-primary);
+    color: white;
+}
+
+/* Imagem dentro do card */
+.card-produto img {
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+/* Nome do produto */
+h3.nome-do-produto {
+    font-size: 30px;
+    color: var(--cor-primary);
+    margin: 2rem auto 1.3rem;
+}
+
+/* =========================
+   Botão "Ver mais"
+   ========================= */
+div#ver-mais {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin: 0 2rem 2rem;
+}
+
+div#ver-mais a {
+    text-decoration: none;
+    color: grey;
+    margin: 2rem;
+}
+
+/* =========================
+   Avaliação
+   ========================= */
+    section#avaliacao {
+    text-align: center;
+    border: .3rem outset var(--cor-primary);
+    outline: .2rem solid var(--cor-accent);
+    box-shadow: 0 0 0 1rem gray;
+    border-radius: 6px;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 50%;
+    padding: auto;
+    font: bold 20px/1.5 "Roboto", sans-serif;
 
     }
 
-    .menu .ul-menu{
+/* Estilização do título da avaliação */
+
+    #titulo-avaliacao {
+        font-size: 20px;
+        color: var(--cor-primary);
+        text-shadow: var(--cor-accent) 0 0 5px;
+    
+    }
+
+/* Estilização do botão de avaliação */
+    .bi-hand-thumbs-up {
+        font-size: 30px;
+        color: var(--cor-primary);
+        text-shadow: var(--cor-accent) 0 0 5px;
+    }
+
+    .bi-hand-thumbs-down {
+        font-size: 30px;
+        color: var(--cor-primary);
+        text-shadow: var(--cor-accent) 0 0 5px;
+    }    
+
+    /* Estilização  frase */
+
+    #frase-avaliacao {
+        font-size: 20px;
+        color: var(--cor-primary);
+        text-shadow: var(--cor-accent) 0 0 5px;
+    }
+/* =========================
+   Rodapé (footer)
+   ========================= */
+.footer {
+    background-color: var(--cor-secondary);
+    margin-top: 5rem;
+}
+
+/* Container dos itens do footer */
+.footer-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    list-style: none;
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Remove bullets caso esqueçam */
+.footer-card li {
+    list-style: none;
+}
+
+/* Links do footer sem sublinhado */
+.footer-card a {
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Cada item do footer */
+.footer-item {
+    margin: .5rem;
+    color: azure;
+}
+
+/* Texto dentro de cada item */
+.footer-nome-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: azure;
+}
+
+/* Ícones padrão no footer */
+.footer-item i {
+    font-size: 60px;
+    color: azure;
+}
+
+/* Seletores específicos para ícones do footer (opcionais) */
+i.bi-house-fill,
+i.bi-emoji-smile,
+i.bi-upc-scan,
+i.bi-cart,
+i.bi-stickies,
+i.bi-person-circle {
+    font-size: 60px;
+    color: azure;
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    header {
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    }
+
+    i.bi-geo-alt, .nome-localizacao, i.bi-image-fill{
+        display: none;
+    }
+
+
+
+     ul.footer-card{
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+
+     }   
+
+
+     .footer-card a{
+        width: 100%;
+
+     }
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    i.bi-search{
+        position: absolute;
+        margin-right: 2rem;
+        padding-left: 2rem;
         
     }
 
-    .ul-menu li{
-        list-style: none;
-        margin: 2rem;
-        color:azure
+
+    #categoria-ul{
+        flex-wrap: wrap;
     }
     
-    .bi-file-person{
-        font-size: 60px;
-        color: azure;
+
+    #cards-produtos{
+        flex-wrap: wrap;
+        
     }
 
-    .bi-geo-alt{
-        font-size: 60px;
-        color: azure;
+    div.card-produto{
+        width: 100%;
+        margin: 1rem;
     }
 
-    .nome-localizacao{
-        font-size: 40px;
-        color: azure;
-        padding-left: 0;
-        padding-right: 5rem;
+    span#frase-avaliacao{
+        display: none;
     }
-
-    .bi-image-fill{
-        font-size: 60px;
-        color: azure;
-    }
+}

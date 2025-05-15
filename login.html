@@ -1,21 +1,48 @@
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
 <html lang="pt-BR">
+<!-- Elemento raiz com atributo de idioma -->
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Define codificação de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Garante compatibilidade com diferentes versões do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsivo: ajusta largura de acordo com a tela do dispositivo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Home</title>
+    <!-- Importa biblioteca de ícones Bootstrap Icons -->
+    <link rel="stylesheet" href="css/style-padrao.css">
+    <!-- Liga o arquivo CSS customizado -->
+    <title>Login</title>
 </head>
 <body>
-    <header>
-        <!-- Cabeçalho -->
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-geo-alt"></i></li>
-                <li><p>João Pessoa, PB</p></li>
-                <li><i class="bi bi-image-fill"></i></li>
+   <header class="cabecalho">
+        <!-- Cabeçalho fixo na parte superior; .cabecalho estiliza via CSS -->
+        <nav class="menu">
+            <!-- Nav semântico para menu de navegação; .menu estiliza o container -->
+            <ul class="ul-menu">
+                <!-- Lista não ordenada para itens do menu; .ul-menu aplica estilo flex -->
+
+               
+                <a href="perfil.html">
+                    <!-- Link para a página de perfil do usuário -->
+                    <i class="bi bi-file-person"></i>
+                    <!-- Ícone de usuário (Bootstrap Icon) -->
+                </a>
+
+                <li id="imagem-localizacao">
+                    <!-- Item de lista com id único para localização -->
+                    <i class="bi bi-geo-alt"></i>
+                    <!-- Ícone de localização (pino) -->
+                    <p class="nome-localizacao">João Pessoa, PB</p>
+                    <!-- Texto com nome da localização; .nome-localizacao estiliza via CSS -->
+                </li>
+
+                <li>
+                    <!-- Item genérico sem id/classe extra -->
+                    <i class="bi bi-image-fill"></i>
+                    <!-- Ícone adicional no menu -->
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,25 +63,51 @@
         </div>
     </section>
 
-    <footer>
-        <ul>
-            <li>
-                <a href=""><i class="bi bi-house-fill"></i></a><p>Home</p>
-            </li>
+    <footer id="footer" class="footer">
+            <!-- Rodapé da página; id e classe para layout e cor de fundo -->
+            <ul class="footer-card">
+                <!-- Lista de itens do footer; flex container para ícones e textos -->
 
-            <li>
-                <a href=""><i class="bi bi-emoji-smile"></i><p>PERFIL</p></a>
-            </li>
+                <a href="home.html">
+                    <li class="footer-item">
+                        <!-- Item do footer; .footer-item adiciona margin e cor -->
+                        <i class="bi bi-house-fill"></i>
+                        <!-- Ícone de casa para HOME -->
+                        <p class="footer-nome-item">HOME</p>
+                        <!-- Texto do item; .footer-nome-item define tipografia -->
+                    </li>
+                </a>
 
-            <li>
-                <a href=""><i class="bi bi-receipt"></i><p>CUPONS</p></a>
-            </li>
+                <a href="cadastrar_usuario.html">
+                    <li class="footer-item">
+                        <i class="bi bi-emoji-smile"></i>
+                        <p class="footer-nome-item">CADASTRAR USUÁRIO</p>
+                    </li>
+                </a>
 
-            <li>
-                <a href=""><i class="bi bi-stickies"></i><p>PEDIDOS</p></a>
-            </li>
-        </ul>
-    </footer>
+                <a href="cadastrar_produto.html">
+                    <li class="footer-item">
+                        <i class="bi bi-upc-scan"></i>
+                        <p class="footer-nome-item">CADASTRO DE PRODUTO</p>
+                    </li>
+                </a>
+
+                <a href="carrinho.html">
+                    <li class="footer-item">
+                        <i class="bi bi-cart"></i>
+                        <p class="footer-nome-item">CARRINHO</p>
+                    </li>
+                </a>
+
+                <a href="produto.html">
+                    <li class="footer-item">
+                        <i class="bi bi-person-circle"></i>
+                        <p class="footer-nome-item">PRODUTO</p>
+                    </li>
+                </a>
+
+            </ul>
+        </footer>
 
     </main>
 </body>

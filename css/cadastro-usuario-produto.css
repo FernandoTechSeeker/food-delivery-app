@@ -1,0 +1,189 @@
+
+/* Importa a fonte Roboto das variantes 400 (regular) e 700 (bold) do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
+:root {
+    --cor-primary:   #FF6B35; /* Laranja vibrante para CTAs e destaques */
+    --cor-secondary: #388E3C; /* Verde para estados de sucesso */
+    --cor-accent:    #FFD166; /* Amarelo suave para hover e alertas */
+}
+/* =========================
+   Reset e estilo global
+   ========================= */
+
+/* Garante layout de altura total e centralização */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Título bonito e no topo */
+.titulo-form {
+  font-size: 2.5rem;
+  color: var(--cor-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
+
+/* Formulário ocupa mais espaço, com borda e sombra */
+.formulario{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-accent);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  gap: 20px;
+  align-self: center; /* Centraliza o formulário */
+  
+  
+}
+
+/* Cada campo ocupa largura total */
+.campo-form {
+  width: 100%;
+     
+}
+
+.label-form {
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: bold;
+  
+}
+
+/* Input maior e mais espaçado */
+.input-form {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  justify-items: baseline;
+  align-self: center;
+}
+
+/* Botão estiloso */
+.botao-form {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.botao-form:hover {
+  background-color: #218838;
+}
+
+/* Importa a fonte Roboto do Google Fonts (400 e 700) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Seleciona todos os elementos da página */
+* {
+    /* Aplica Roboto (ou fonte fallback) em todo o site */
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /* Remove margens padrão */
+    margin: 0;
+    /* Remove espaçamentos internos padrão */
+    padding: 0;
+}
+
+/* Estilização básica do body */
+body {
+    /* Garante que cubra toda a altura da viewport */
+    min-height: 100vh;
+}
+
+/* Definição de variáveis de cores globais */
+:root {
+    /* Cor principal (CTA, botões) */
+    --cor-primary: #FF6B35;
+    /* Cor secundária (status de sucesso, confirm) */
+    --cor-secondary: #388E3C;
+    /* Cor de destaque (hover, alertas) */
+    --cor-accent: #FFD166;
+}
+
+
+
+/* Título bonito e no topo */
+.titulo-form {
+  font-size: 2.5rem;
+  color: var(--cor-primary);
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Formulário ocupa mais espaço, com borda e sombra */
+.formulario{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-accent);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  gap: 20px;
+  align-self: center; /* Centraliza o formulário */
+}
+
+/* Cada campo ocupa largura total */
+.campo-form {
+  width: 100%;
+}
+
+.label-form {
+  font-size: 20px;
+  color: var(--cor-secondary);
+  display: block;
+  margin-bottom: 8px;
+  
+}
+
+/* Input maior e mais espaçado */
+.input-form {
+  width: 100%;
+  padding: 12px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Botão estiloso */
+.botao-form {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.botao-form:hover {
+  background-color: #218838;
+}
+

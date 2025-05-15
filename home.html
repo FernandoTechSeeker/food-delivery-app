@@ -1,102 +1,189 @@
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
 <html lang="pt-BR">
+<!-- Elemento raiz com atributo de idioma -->
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Define codificação de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Garante compatibilidade com diferentes versões do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsivo: ajusta largura de acordo com a tela do dispositivo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Importa biblioteca de ícones Bootstrap Icons -->
     <link rel="stylesheet" href="css/style-padrao.css">
+    <!-- Liga o arquivo CSS customizado -->
 
     <title>Home</title>
+    <!-- Texto exibido na aba do navegador -->
 </head>
 <body>
-    <header class="cabecalho"> 
-        <!-- Cabeçalho -->
+    <!-- Início do corpo da página -->
+
+    <header class="cabecalho">
+        <!-- Cabeçalho fixo na parte superior; .cabecalho estiliza via CSS -->
         <nav class="menu">
+            <!-- Nav semântico para menu de navegação; .menu estiliza o container -->
             <ul class="ul-menu">
-            <a href="perfil.html">
-                <i class="bi bi-file-person"></i>
-             </a>
-                <li><i class="bi bi-geo-alt"></i></li>
-                <li><p class="nome-localizacao">João Pessoa, PB</p></li>
-                <li><i class="bi bi-image-fill"></i></li>
+                <!-- Lista não ordenada para itens do menu; .ul-menu aplica estilo flex -->
+
+                <a href="perfil.html">
+                    <!-- Link para a página de perfil do usuário -->
+                    <i class="bi bi-file-person"></i>
+                    <!-- Ícone de usuário (Bootstrap Icon) -->
+                </a>
+
+                <li id="imagem-localizacao">
+                    <!-- Item de lista com id único para localização -->
+                    <i class="bi bi-geo-alt"></i>
+                    <!-- Ícone de localização (pino) -->
+                    <p class="nome-localizacao">João Pessoa, PB</p>
+                    <!-- Texto com nome da localização; .nome-localizacao estiliza via CSS -->
+                </li>
+
+                <li>
+                    <!-- Item genérico sem id/classe extra -->
+                    <i class="bi bi-image-fill"></i>
+                    <!-- Ícone adicional no menu -->
+                </li>
+
             </ul>
         </nav>
     </header>
+
     <main>
-        <!--  Principal -->
-          <span>
-            <h1>Nome da empresa</h1>
-            <h2>Olá, Seja bem-vindo</h2>
-            <h3>Vamos fazer o seu pedido?</h3>
+        <!-- Conteúdo principal da página -->
 
-          </span>
+        <section id="mensagem-inicio">
+            <!-- Seção de boas-vindas; id para aplicar estilos específicos -->
+            <h1 id="nome-empresa">Nome da empresa</h1>
+            <!-- Título principal da empresa; id usado para estilização/JS -->
+            <h2 class="mensagem">Olá, Seja bem-vindo</h2>
+            <!-- Subtítulo de mensagem; .mensagem aplica estilo comum -->
+            <h3 class="mensagem">Vamos fazer o seu pedido?</h3>
+            <!-- Subtítulo complementar -->
+        </section>
 
-          <section>
+        <section id="input">
+            <!-- Seção de input de busca/pedido; id para estilização -->
             <i class="bi bi-search"></i>
-            <input type="text" placeholder="Digite seu pedido aqui...">
-          </section>
+            <!-- Ícone de lupa posicionado sobre o input -->
+            <input id="input-text" type="text" placeholder="Digite seu pedido aqui...">
+            <!-- Campo de texto para digitar pedido; placeholder orienta o usuário -->
+        </section>
 
-          <section>
-            <ul>
-                <li><a href="">Catergoria 1</a></li>
-                <li><a href="">Catergoria 2</a></li>
-                <li><a href="">Catergoria 3</a></li>
-                <li><a href="">Catergoria 4</a></li>
+        <section id="categorias">
+            <!-- Seção de categorias de produto; id para layout flex -->
+            <ul id="categoria-ul">
+                <!-- Lista de categorias; id para aplicar estilo flex row -->
+
+                <a href="#" class="categoria-a">
+                    <!-- Link clicável que envolve o card de categoria -->
+                    <li class="categoria">Categoria 1</li>
+                    <!-- Item de categoria; .categoria estiliza borda, padding e hover -->
+                </a>
+
+                <a href="#" class="categoria-a">
+                    <li class="categoria">Categoria 2</li>
+                </a>
+                <a href="#" class="categoria-a">
+                    <li class="categoria">Categoria 3</li>
+                </a>
+                <a href="#" class="categoria-a">
+                    <li class="categoria">Categoria 4</li>
+                </a>
+
             </ul>
-          </section>
+        </section>
 
-          <section>
-            <div>
-                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-                " alt="imagem exemplo">
-                <h3>food 1</h3>
+        <section id="cards-produtos">
+            <!-- Seção de cards de produtos; id define container flex -->
+
+            <div class="card-produto">
+                <!-- Card genérico para um produto; .card-produto estiliza borda e sombra -->
+                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem exemplo">
+                <!-- Imagem do produto; atributo alt para acessibilidade -->
+                <h3 class="nome-do-produto">food 1</h3>
+                <!-- Nome do produto; .nome-do-produto define tipografia -->
             </div>
-            <div>
-                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-                " alt="imagem exemplo">
-                <h3>food 2</h3>
+
+            <div class="card-produto">
+                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem exemplo">
+                <h3 class="nome-do-produto">food 2</h3>
             </div>
-            <div>
-                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-                " alt="imagem exemplo">
-                <h3>food 3</h3>
+            <div class="card-produto">
+                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem exemplo">
+                <h3 class="nome-do-produto">food 3</h3>
             </div>
-            <div>
-                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg
-                " alt="imagem exemplo">
-                <h3>food 4</h3>
-                <div>
-                    <a href="">Ver mais</a>
-                </div>
+            <div class="card-produto">
+                <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-gallery-vector-icon-png-image_470660.jpg" alt="imagem exemplo">
+                <h3 class="nome-do-produto">food 4</h3>
             </div>
-          </section>
-    <section>
-        <p>AVALIE NOSSO APP</p>
-        <i class="bi bi- hand-thumbs-up"></i>
-        <i class="bi bi- hand-thumbs-down"></i>
-        <span>Sua avaliação pode gerar cupons</span>
 
-    </section>
-    <footer>
-        <ul>
-            <li>
-                <a href=""><i class="bi bi-house-fill"></i></a><p>Home</p>
-            </li>
+        </section>
 
-            <li>
-                <a href=""><i class="bi bi-emoji-smile"></i><p>PERFIL</p></a>
-            </li>
+        <div id="ver-mais">
+            <!-- Botão/link para carregar mais produtos -->
+            <a href="#">Ver mais &gt;&gt;</a>
+        </div>
 
-            <li>
-                <a href=""><i class="bi bi-receipt"></i><p>CUPONS</p></a>
-            </li>
+        <section id="avaliacao">
+            <!-- Seção de avaliação do app; id para estilização com CSS -->
+            <p id="titulo-avaliacao">AVALIE NOSSO APP</p>
+            <!-- Título da área de avaliação; id para tamanho e cor -->
+            <i class="bi bi-hand-thumbs-up"></i>
+            <!-- Ícone de "gostei" (thumbs up) -->
+            <i class="bi bi-hand-thumbs-down"></i>
+            <!-- Ícone de "não gostei" (thumbs down) -->
+            <span id="frase-avaliacao">Sua avaliação pode gerar cupons</span>
+            <!-- Texto explicativo; id usado para estilização e responsividade -->
+        </section>
 
-            <li>
-                <a href=""><i class="bi bi-stickies"></i><p>PEDIDOS</p></a>
-            </li>
-        </ul>
-    </footer>
+        <footer id="footer" class="footer">
+            <!-- Rodapé da página; id e classe para layout e cor de fundo -->
+            <ul class="footer-card">
+                <!-- Lista de itens do footer; flex container para ícones e textos -->
+
+                <a href="home.html">
+                    <li class="footer-item">
+                        <!-- Item do footer; .footer-item adiciona margin e cor -->
+                        <i class="bi bi-house-fill"></i>
+                        <!-- Ícone de casa para HOME -->
+                        <p class="footer-nome-item">HOME</p>
+                        <!-- Texto do item; .footer-nome-item define tipografia -->
+                    </li>
+                </a>
+
+                <a href="cadastrar_usuario.html">
+                    <li class="footer-item">
+                        <i class="bi bi-emoji-smile"></i>
+                        <p class="footer-nome-item">CADASTRAR USUÁRIO</p>
+                    </li>
+                </a>
+
+                <a href="cadastrar_produto.html">
+                    <li class="footer-item">
+                        <i class="bi bi-upc-scan"></i>
+                        <p class="footer-nome-item">CADASTRO DE PRODUTO</p>
+                    </li>
+                </a>
+
+                <a href="carrinho.html">
+                    <li class="footer-item">
+                        <i class="bi bi-cart"></i>
+                        <p class="footer-nome-item">CARRINHO</p>
+                    </li>
+                </a>
+
+                <a href="produto.html">
+                    <li class="footer-item">
+                        <i class="bi bi-person-circle"></i>
+                        <p class="footer-nome-item">PRODUTO</p>
+                    </li>
+                </a>
+
+            </ul>
+        </footer>
 
     </main>
 </body>
