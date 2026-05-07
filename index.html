@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery App | Fernando Canto</title>
+  <meta name="description" content="Interface front-end de um aplicativo de delivery com produtos, carrinho e resumo de pedido." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#" class="brand">Food<span>Flow</span></a>
+      <ul class="nav-links">
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#pedido">Pedido</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Food Delivery App</p>
+          <h1>Interface de delivery com fluxo de produtos e carrinho.</h1>
+          <p>
+            Projeto em desenvolvimento para simular uma aplicação de delivery, conectando lógica de sistema, experiência do usuário e fluxo de pedidos.
+          </p>
+          <div class="hero-actions">
+            <a href="#produtos" class="btn btn-primary">Ver cardápio</a>
+            <a href="#pedido" class="btn btn-secondary">Ver pedido</a>
+          </div>
+        </div>
+
+        <aside class="order-preview" aria-label="Resumo de pedido demonstrativo">
+          <span class="status-pill">Pedido em montagem</span>
+          <h2>Resumo rápido</h2>
+          <p>Monte um pedido, adicione itens ao carrinho e acompanhe o total em tempo real.</p>
+          <div class="preview-item">
+            <span>Tempo estimado</span>
+            <strong>35–45 min</strong>
+          </div>
+          <div class="preview-item">
+            <span>Taxa de entrega</span>
+            <strong>R$ 6,90</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container info-grid">
+        <article class="info-card">
+          <h2>Objetivo do projeto</h2>
+          <p>
+            Criar uma interface front-end para representar o fluxo de um delivery: visualização de produtos, adição ao carrinho, cálculo de total e simulação de pedido.
+          </p>
+        </article>
+        <article class="info-card">
+          <h2>Back-end e front-end</h2>
+          <p>
+            O projeto é apresentado como uma aplicação full-stack em evolução: back-end iniciado e front-end desenvolvido para demonstrar a experiência do usuário.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="produtos" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Cardápio</p>
+          <h2>Produtos disponíveis</h2>
+          <p>Itens fictícios usados para demonstrar interação, carrinho e cálculo de pedido.</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section id="pedido" class="section">
+      <div class="container checkout-grid">
+        <div>
+          <p class="eyebrow">Carrinho</p>
+          <h2>Resumo do pedido</h2>
+          <p class="muted">Os dados são demonstrativos e ficam apenas no navegador durante a interação.</p>
+        </div>
+
+        <aside class="cart-card">
+          <div id="cartItems" class="cart-items"></div>
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+          <button id="finishOrder" class="btn btn-primary full">Finalizar pedido demonstrativo</button>
+          <p id="orderMessage" class="order-message"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Fernando Canto — Food Delivery App. Projeto de portfólio em desenvolvimento.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
